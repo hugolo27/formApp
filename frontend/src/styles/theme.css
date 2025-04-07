@@ -1,0 +1,7 @@
+:root {
+  --primary-color: #282c52;
+  --primary-color-hover: #1f2242;
+  --max-width: 800px;
+  --snackbar-duration: 6000ms;
+  --redirect-delay: 2000ms;
+} 

@@ -26,3 +26,17 @@ services:
       - database
     ports:
       - 8080:8080
+  frontend:
+    container_name: vial-frontend
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    ports:
+      - 3000:3000
+    depends_on:
+      - nodeserver
+    environment:
+      - VITE_API_URL=http://localhost:8080
